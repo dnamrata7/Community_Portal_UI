@@ -23,9 +23,9 @@ const AccountDetails = props => {
   const classes = useStyles();
 
   const [values, setValues] = useState({
-    firstName: 'Shen',
-    lastName: 'Zhi',
-    email: 'shen.zhi@devias.io',
+    firstName: 'Tester1',
+    lastName: '',
+    email: 'tester1@gmail.com',
     phone: '',
     state: 'Alabama',
     country: 'USA'

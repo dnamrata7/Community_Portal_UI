@@ -9,12 +9,14 @@ import {
   ProductList as ProductListView,
   UserList as UserListView,
   Community as CommunityView,
-  Icons as IconsView,
   Account as AccountView,
   Settings as SettingsView,
   SignUp as SignUpView,
   SignIn as SignInView,
-  NotFound as NotFoundView
+  NotFound as NotFoundView,
+  TestRunner as TestingView,
+  Automated as AutomatedView,
+  RunResults as RunResultsView
 } from './views';
 
 const Routes = () => {
@@ -45,7 +47,7 @@ const Routes = () => {
         path="/products"
       />
       <RouteWithLayout
-        component={IconsView}
+        component={CommunityView}
         exact
         layout={MainLayout}
         path="/community"
@@ -73,6 +75,25 @@ const Routes = () => {
         exact
         layout={MinimalLayout}
         path="/sign-in"
+      />
+       <RouteWithLayout
+        component={AutomatedView}
+        exact
+        layout={MainLayout}
+        path="/Automated"
+      />
+
+   <RouteWithLayout
+        component={RunResultsView}
+        exact
+        layout={MainLayout}
+        path="/RunResults"
+      />
+      <RouteWithLayout
+        component={TestingView}
+        exact
+        layout={MainLayout}
+        path="/testing"
       />
       <RouteWithLayout
         component={NotFoundView}
