@@ -1,0 +1,64 @@
+.NewProject a{
+  width: 100%;
+  background-color: #347;
+  color: lightGreen;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.NewProject a:hover{
+  width: 100%;
+  background-color: #eee;
+  color: Green;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.NewProject{
+  text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+  font-size: 25px
+}
+
+.MyProjects a{
+  text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+  font-size: 25px
+}
+
+.MyProjects a:hover{
+  text-align: center;
+	text-decoration: none;
+	font-weight: bolder;
+	color: blue;
+  font-size: 25px
+}
+
+.MyProjects{
+  text-align: center;
+  text-shadow: 3px 3px #eee;
+	text-decoration: none;
+	font-weight: bold;
+	color: blue;
+  font-size: 35px
+}
+
+
+.label{
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 0px;
+  font-weight: normal;
+  color: red;
+  font-size: 25px
+}

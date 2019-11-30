@@ -16,7 +16,10 @@ import {
   NotFound as NotFoundView,
   TestRunner as TestingView,
   Automated as AutomatedView,
-  RunResults as RunResultsView
+  RunResults as RunResultsView,
+  MyProjects as MyProjectsView,
+  NewProject as NewProjectView,
+  ViewProject as ViewProjectView
 } from './views';
 
 const Routes = () => {
@@ -46,6 +49,25 @@ const Routes = () => {
         layout={MainLayout}
         path="/products"
       />
+        <RouteWithLayout
+        component={NewProjectView}
+        exact
+        layout={MainLayout}
+        path="/newproject"
+      />
+      <RouteWithLayout
+        component={MyProjectsView}
+        exact
+        layout={MainLayout}
+        path="/myprojects"
+      />
+       <RouteWithLayout
+        component={ViewProjectView}
+        exact
+        layout={MainLayout}
+        path="/viewproject"
+      />
+
       <RouteWithLayout
         component={CommunityView}
         exact

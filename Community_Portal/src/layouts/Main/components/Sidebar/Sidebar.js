@@ -60,6 +60,16 @@ const Sidebar = props => {
       icon: <ShoppingBasketIcon />
     },
     {
+      title: 'Create Project',
+      href: '/newproject',
+      icon: <ShoppingBasketIcon />
+    },
+    {
+      title: 'View Projects',
+      href: '/viewproject',
+      icon: <ShoppingBasketIcon />
+    },
+    {
       title: 'Authentication',
       href: '/sign-in',
       icon: <LockOpenIcon />

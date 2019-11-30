@@ -10,3 +10,6 @@ export { default as UserList } from './UserList';
 export { default as TestRunner } from './TestRunner';
 export { default as Automated } from './Automated';
 export { default as RunResults } from './RunResults';
+export { default as MyProjects } from './MyProjects';
+export { default as NewProject } from './NewProject';
+export { default as ViewProject } from './ViewProject';
