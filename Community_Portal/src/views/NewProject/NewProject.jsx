@@ -1,8 +1,10 @@
 // /client/App.js
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import {CardElement, injectStripe} from 'react-stripe-elements';
 import './NewProject.css';
+import {Elements, StripeProvider} from 'react-stripe-elements';
+import CheckoutForm from './CheckoutForm';
 
 class NewProject extends Component {
   // initialize our state
@@ -15,6 +17,17 @@ class NewProject extends Component {
     idToUpdate: null,
     objectToUpdate: null,
   };
+
+  constructor(props) {
+  super(props);
+  this.submit = this.submit.bind(this);
+  this.addProject = this.addProject.bind(this);
+  localStorage.setItem('payment', false);
+  }
+
+  async submit(ev) {
+    // User clicked submit
+  }
 
   // when component mounts, first thing it does is fetch all existing data in our db
   // then we incorporate a polling logic so that we can easily see if our db has
@@ -106,6 +119,15 @@ class NewProject extends Component {
     });
   };
 
+  addProject(){
+    console.log(localStorage.getItem('payment'));
+    if(localStorage.getItem('payment')=="true"){
+      console.log("+++++++++++");
+      localStorage.setItem('payment', false);
+      this.putDataToDB(this.state.message, this.state.projectname, this.state.description, this.state.manager_email, this.state.release_date, this.state.progress)
+    }
+  }
+
   // here is our UI
   // it is easy to understand their functions when you
   // see them render into our screen
@@ -113,7 +135,8 @@ class NewProject extends Component {
     const { data } = this.state;
     return (
       <div>
-        <div class="NewProject" style={{ padding: '10px' }}>
+      <div className = "card">
+        <div className="NewProject" style={{ padding: '10px' }}>
           Project code :     <input
             type="text"
             onChange={(e) => this.setState({ message: e.target.value })}
@@ -150,10 +173,23 @@ class NewProject extends Component {
             placeholder="metrics in %"
             style={{ width: '200px' }}
           /> <br/><br/><br/>
-          <button onClick={() => this.putDataToDB(this.state.message, this.state.projectname, this.state.description, this.state.manager_email, this.state.release_date, this.state.progress)}>
-            Add new Project
+</div>
+<div className = "card">
+          <StripeProvider apiKey="pk_test_Qq4JpxCdmySxnTe61jlSfmg800qkdiS8GJ">
+    <div className="example">
+      <h2>Please provide your card info (Pay-as-you-go)</h2>
+      <Elements>
+        <CheckoutForm />
+      </Elements>
+    </div>
+  </StripeProvider>
+</div>
+<br/><br/>
+          <button onClick={this.addProject}>
+            Add Project
           </button>
         </div>
+
       </div>
     );
   }

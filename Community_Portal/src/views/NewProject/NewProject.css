@@ -22,3 +22,11 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.card {
+  padding: 10px 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}

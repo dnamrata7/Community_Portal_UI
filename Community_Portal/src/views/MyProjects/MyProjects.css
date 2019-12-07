@@ -62,3 +62,16 @@
   color: red;
   font-size: 25px
 }
+
+.card {
+  padding: 10px 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}

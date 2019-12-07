@@ -59,7 +59,7 @@ router.delete('/deleteData', (req, res) => {
   });
 });
 
-// this is our create methid
+// this is our create method
 // this method adds new data in our database
 router.post('/putData', (req, res) => {
   let data = new Data();
@@ -86,6 +86,7 @@ router.post('/putData', (req, res) => {
 });
 
 // append /api for our http requests
+app.use(express.json());
 app.use('/api', router);
 
 // launch our backend into a port

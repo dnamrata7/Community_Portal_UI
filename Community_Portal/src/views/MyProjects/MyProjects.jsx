@@ -46,20 +46,22 @@ class MyProjects extends React.Component{
         return (
           <div>
             <div class = "NewProject">
-            <Link to="/NewProject">Create new Project</Link>
-            <br/><br/><br/><br/>
+            <br/>
             </div>
-            <div class = "MyProjects">
-            <p>Active Projects</p>
+            <div class = "card">
+            <p class = "MyProjects">Active Projects</p>
+            <br/>
               <ul class = "MyProjects">
                 {data.length <= 0
                   ? <label class = "label"><br/>You don't have any active projects</label>
                   : data.map((dat) => (
-                      <li style={{ padding: '10px' }} >
-                        <Link
-                        component={RouterLink}
-                        to={{ pathname: '/ViewProject', state: { id: dat.id, message: dat.message, data : dat } }}>{dat.projectname}</Link>
-                      </li>
+                    <div class="card">
+                    <h2><b><li style={{ padding: '20px' }} >
+                    <Link
+                    component={RouterLink}
+                    to={{ pathname: '/ViewProject', state: { id: dat.id, message: dat.message, data : dat } }}>{dat.projectname}</Link>
+                    </li></b></h2>
+                    </div>
                     ))}
               </ul>
             </div>

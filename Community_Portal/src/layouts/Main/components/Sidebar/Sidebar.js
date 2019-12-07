@@ -66,7 +66,7 @@ const Sidebar = props => {
     },
     {
       title: 'View Projects',
-      href: '/viewproject',
+      href: '/myProjects',
       icon: <ShoppingBasketIcon />
     },
     {
@@ -114,7 +114,7 @@ const Sidebar = props => {
           className={classes.nav}
           pages={pages}
         />
-        
+
       </div>
     </Drawer>
   );
