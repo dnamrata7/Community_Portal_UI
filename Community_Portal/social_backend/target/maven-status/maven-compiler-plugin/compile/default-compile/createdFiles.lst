@@ -1,0 +1,15 @@
+Community\model\Categories.class
+Community\model\Option.class
+Community\repository\PostRepository.class
+Community\service\CategoryService.class
+Community\model\Comment.class
+Community\model\Post.class
+Community\service\PostService.class
+Community\model\Category.class
+Community\controller\CommentController.class
+Community\CommunityApplication.class
+Community\controller\CategoriesController.class
+Community\service\CommentService.class
+Community\controller\PostController.class
+Community\repository\CommentRepository.class
+Community\repository\CategoryRepository.class
