@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
   drawer: {
     width: 240,
     [theme.breakpoints.up('lg')]: {
-      marginTop: 64,
-      height: 'calc(100% - 64px)'
+      marginTop: 94,
+      height: 'calc(100% - 94px)'
     }
   },
   root: {
@@ -45,19 +45,9 @@ const Sidebar = props => {
 
   const pages = [
     {
-      title: 'Dashboard',
-      href: '/dashboard',
-      icon: <DashboardIcon />
-    },
-    {
-      title: 'Users',
-      href: '/users',
-      icon: <PeopleIcon />
-    },
-    {
-      title: 'Products',
-      href: '/products',
-      icon: <ShoppingBasketIcon />
+      title: 'Account',
+      href: '/account',
+      icon: <AccountBoxIcon />
     },
     {
       title: 'Create Project',
@@ -70,29 +60,19 @@ const Sidebar = props => {
       icon: <ShoppingBasketIcon />
     },
     {
-      title: 'Authentication',
-      href: '/sign-in',
-      icon: <LockOpenIcon />
-    },
-    {
       title: 'Community',
       href: '/community',
       icon: <ImageIcon />
     },
     {
-      title: 'Account',
-      href: '/account',
-      icon: <AccountBoxIcon />
+      title: 'Testing',
+      href: '/testing',
+      icon: <TextFieldsIcon />
     },
     {
       title: 'Settings',
       href: '/settings',
       icon: <SettingsIcon />
-    },
-    {
-      title: 'Testing',
-      href: '/testing',
-      icon: <TextFieldsIcon />
     },
   ];
 
