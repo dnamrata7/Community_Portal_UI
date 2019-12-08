@@ -3,17 +3,17 @@ import uuid from 'uuid/v1';
 export default [
   {
     id: uuid(),
-    ref: 'CDD1049',
+    ref: 'Test Scripting',
     amount: 30.5,
     customer: {
       name: 'Ekaterina Tankova'
     },
     createdAt: 1555016400000,
-    status: 'pending'
+    status: 'in-progress'
   },
   {
     id: uuid(),
-    ref: 'CDD1048',
+    ref: 'Design tests',
     amount: 25.1,
     customer: {
       name: 'Cao Yu'
@@ -23,17 +23,17 @@ export default [
   },
   {
     id: uuid(),
-    ref: 'CDD1047',
+    ref: 'Prepare enviornment',
     amount: 10.99,
     customer: {
       name: 'Alexa Richardson'
     },
     createdAt: 1554930000000,
-    status: 'refunded'
+    status: 'in-progress'
   },
   {
     id: uuid(),
-    ref: 'CDD1046',
+    ref: 'Scripts execution',
     amount: 96.43,
     customer: {
       name: 'Anje Keizer'
@@ -43,22 +43,22 @@ export default [
   },
   {
     id: uuid(),
-    ref: 'CDD1045',
+    ref: 'Live testing',
     amount: 32.54,
     customer: {
       name: 'Clarke Gillebert'
     },
     createdAt: 1554670800000,
-    status: 'delivered'
+    status: 'pending'
   },
   {
     id: uuid(),
-    ref: 'CDD1044',
+    ref: 'Deployment',
     amount: 16.76,
     customer: {
       name: 'Adam Denisov'
     },
     createdAt: 1554670800000,
-    status: 'delivered'
+    status: 'pending'
   }
 ];

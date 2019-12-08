@@ -47,7 +47,7 @@ const UsersByDevice = props => {
   const data = {
     datasets: [
       {
-        data: [63, 15, 22],
+        data: [4, 12, 2],
         backgroundColor: [
           theme.palette.primary.main,
           theme.palette.error.main,
@@ -58,7 +58,7 @@ const UsersByDevice = props => {
         hoverBorderColor: theme.palette.white
       }
     ],
-    labels: ['Desktop', 'Tablet', 'Mobile']
+    labels: ['Managers', 'Testers', 'Other']
   };
 
   const options = {
@@ -85,21 +85,18 @@ const UsersByDevice = props => {
 
   const devices = [
     {
-      title: 'Desktop',
-      value: '63',
-      icon: <LaptopMacIcon />,
+      title: 'Managers',
+      value: '22',
       color: theme.palette.primary.main
     },
     {
-      title: 'Tablet',
-      value: '15',
-      icon: <TabletMacIcon />,
+      title: 'Testers',
+      value: '76',
       color: theme.palette.error.main
     },
     {
-      title: 'Mobile',
-      value: '23',
-      icon: <PhoneIphoneIcon />,
+      title: 'Other',
+      value: '2',
       color: theme.palette.warning.main
     }
   ];
@@ -115,7 +112,7 @@ const UsersByDevice = props => {
             <RefreshIcon />
           </IconButton>
         }
-        title="Users By Device"
+        title="Users By Role"
       />
       <Divider />
       <CardContent>

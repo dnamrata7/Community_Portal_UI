@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
 
-import {
+/*import {
   Budget,
   TotalUsers,
   TasksProgress,
@@ -11,7 +11,7 @@ import {
   UsersByDevice,
   LatestProducts,
   LatestOrders
-} from './components';
+} from './components';*/
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +23,8 @@ const Dashboard = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div></div>
+    /*<div className={classes.root}>
       <Grid
         container
         spacing={4}
@@ -101,7 +102,7 @@ const Dashboard = () => {
           <LatestOrders />
         </Grid>
       </Grid>
-    </div>
+    </div>*/
   );
 };
 
