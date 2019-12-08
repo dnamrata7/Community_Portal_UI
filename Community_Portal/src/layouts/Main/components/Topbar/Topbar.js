@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,Component } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -33,7 +33,6 @@ const Topbar = props => {
       className={clsx(classes.root, className)}
     >
       <Toolbar>
-       
       <RouterLink to="/">
           <img
             alt="Logo"
@@ -42,15 +41,6 @@ const Topbar = props => {
         </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
-          <IconButton color="inherit">
-            <Badge
-              badgeContent={notifications.length}
-              color="primary"
-              variant="dot"
-            >
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
           <IconButton
             className={classes.signOutButton}
             color="inherit"
