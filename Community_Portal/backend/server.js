@@ -9,6 +9,9 @@ const API_PORT = 3001;
 const app = express();
 app.use(cors());
 const router = express.Router();
+// To sync project and community
+
+const Category = require('./models/Category')
 
 // this is our MongoDB database
 //const dbRoute ='mongodb+srv://admin:admin321@projectmanagement-blamh.mongodb.net/test?retryWrites=true&w=majority';
@@ -63,7 +66,6 @@ router.delete('/deleteData', (req, res) => {
 // this method adds new data in our database
 router.post('/putData', (req, res) => {
   let data = new Data();
-
   const { id, message, projectname, description, manager_email, release_date, progress } = req.body;
 
   if ((!id && id !== 0) || !message) {
@@ -79,12 +81,35 @@ router.post('/putData', (req, res) => {
   data.manager_email = manager_email;
   data.release_date = release_date;
   data.progress = progress;
-  data.save((err) => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
-  });
-});
 
+  Data.findOne({
+    projectname:req.body.projectname
+  })
+  .then(project =>{
+    if (!project) {
+      data.save((err) => {
+        if (err) return res.json({ success: false, error: err });
+        else{
+          // Adding same project in category Collection to populate posts and comments
+          const category = new Category();
+          category.name = projectname;
+          category.path = projectname;
+          category.save((err) => {
+              if (err) return res.json({ success: false, error: err });
+            });
+        }
+        return res.json({ success: true });
+      });
+  }
+  else{
+    res.json({ error: 'Project already exists' })
+  }
+ } )
+ .catch(err => {
+  res.send('error: ' + err)
+})
+
+});
 // append /api for our http requests
 app.use(express.json());
 app.use('/api', router);
