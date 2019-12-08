@@ -59,7 +59,7 @@ class MyProjects extends React.Component{
                     <h2><b><li style={{ padding: '20px' }} >
                     <Link
                     component={RouterLink}
-                    to={{ pathname: '/ViewProject', state: { id: dat.id, message: dat.message, data : dat } }}>{dat.projectname}</Link>
+                    to={{ pathname: '/ViewProject', state: { id: dat.id, message: dat.message} }}>{dat.projectname}</Link>
                     </li></b></h2>
                     </div>
                     ))}

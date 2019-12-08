@@ -58,7 +58,6 @@ class ViewProject extends React.Component{
   };
 
     render() {
-
       const { data } = this.state;
   //const classes = useStyles();
 
@@ -113,8 +112,7 @@ class ViewProject extends React.Component{
                   xl={9}
                   xs={12}
                 >
-
-                { data.slice(0, 1).map((dat) => (
+                { data.slice(this.props.history.location.state.id, this.props.history.location.state.id+1).map((dat) => (
                   <div><br/><p><label class = "ViewProjects">Project name : </label>
                   {dat.projectname}</p>
                   <br/> <p><label class = "ViewProjects">Summary : </label>

@@ -122,7 +122,6 @@ class NewProject extends Component {
   addProject(){
     console.log(localStorage.getItem('payment'));
     if(localStorage.getItem('payment')=="true"){
-      console.log("+++++++++++");
       localStorage.setItem('payment', false);
       this.putDataToDB(this.state.message, this.state.projectname, this.state.description, this.state.manager_email, this.state.release_date, this.state.progress)
     }
@@ -135,6 +134,8 @@ class NewProject extends Component {
     const { data } = this.state;
     return (
       <div>
+      <br/>
+      <div className = "card">
       <div className = "card">
         <div className="NewProject" style={{ padding: '10px' }}>
           Project code :     <input
@@ -172,8 +173,10 @@ class NewProject extends Component {
             onChange={(e) => this.setState({ progress: e.target.value })}
             placeholder="metrics in %"
             style={{ width: '200px' }}
-          /> <br/><br/><br/>
+          />
 </div>
+</div>
+<br/>
 <div className = "card">
           <StripeProvider apiKey="pk_test_Qq4JpxCdmySxnTe61jlSfmg800qkdiS8GJ">
     <div className="example">
