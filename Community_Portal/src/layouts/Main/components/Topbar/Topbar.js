@@ -34,7 +34,12 @@ const Topbar = props => {
     >
       <Toolbar>
        
-        <div><h1 color="white" >Mtaas Community Component</h1></div>
+      <RouterLink to="/">
+          <img
+            alt="Logo"
+            src="/images/logos/logo.jpg"
+          />
+        </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">
